@@ -2,34 +2,41 @@
 Nassi-Shneiderman-Diagramme (NSD) Programmstrukture werden auch als Struktogramme bezeichnet.
 
 
-Das Repository enthält verschiedene Zweige, die Struktogramme enthalten,
-die über das Programm _Struktorizer_ ( https://structorizer.fisch.lu/ ) 
-erstellt wurden
+Das Repository enthält verschiedene Zweige, die Struktogramme enthalten.
 
+Typsicherweise werden die Struktogramme dieses Repository
+über das Programm _Struktorizer_ ( https://structorizer.fisch.lu/ ) 
+erstellt.
 
-Jeder Zweig beginnt mit einem Benutzernamen,  `<user>`. 
-Der restliche gibt Hinweise auf die umgesetzte Aufgabenstellung.
+## Organisation des Repository
 
+* Jeder Zweig des Repository beginnt mit einem Benutzernamen,  `<user>`. 
+* Der restliche Zweig gibt Hinweise auf die umgesetzte Aufgabenstellung.
+
+.Beispiele für die Benennung von Zweigen.
 ----
 <user>/bws/lf6/cpp-basics/Programmverzweigungen/A05-Zeugnis-Versetzung
 <user>/ihk/2017/WJ/A11-Getränkeahandlung
 ----
 
-Dieses remote Repository hat den URL: https://github.com/msg-azubi/nsd.git
+
+## Wie dieses remote mit einem lokalen Repository zu verknüpfen ist.
+
+Dieses remote Repository hat den URL: `https://github.com/msg-azubi/nsd.git`
 
 Um ein lokales Repository mit diesem remote Repository zu verbinden,
 sind folgende Schritte nötig:
 
 * In das Wurzelverzeichnis (_engl._ root directory) des lokalen Repository wechseln
 +
-.Per Git-Bash
+.Per Git-Bash zum Beispiel in das Verzeichnis wechseln
 ----
 cd /c/dev/azubis/structorizer-projects
 ----
 
-* Dem lokalen Repository sagen, das der remote Repository name `origin` auf einen bestimmte URL zu zeigen hat:
+* Dem lokalen Repository sagen, das der Name `origin` auf einen bestimmte URL zu zeigen hat.
 +
-.Den URL des remote Repository den remote Schlüssek (_engl._ key) `origin` zuordnen.
+.Der URL des remote Repository wird als Wert dem Schlüssel (_engl._ key) `origin` zuordnen.
 ----
 git remote add origin https://github.com/msg-azubi/nsd.git
 ----
