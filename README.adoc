@@ -20,7 +20,7 @@ erstellt.
 ----
 
 
-## Wie dieses remote mit einem lokalen Repository zu verknüpfen ist.
+## Wie dieses remote Repository mit einem lokalen Repository zu verknüpfen ist.
 
 Dieses remote Repository hat den URL: `https://github.com/msg-azubi/nsd.git`
 
@@ -36,8 +36,22 @@ cd /c/dev/azubis/structorizer-projects
 
 * Dem lokalen Repository sagen, das der Name `origin` auf einen bestimmte URL zu zeigen hat.
 +
-.Der URL des remote Repository wird als Wert dem Schlüssel (_engl._ key) `origin` zuordnen.
+.Der URL des remote Repository wird als Wert dem Schlüssel (_engl._ key) `origin` zugeordnet.
 ----
 git remote add origin https://github.com/msg-azubi/nsd.git
 ----
 
+## Wie ein Zweig vom lokalen Repository ins remote Repository übergeben wird
+
+Der Standardbefehl von Git dafür ist:
+
++
+----
+git push
+----
+
+Gegebenfalls müssen Konfigurartion durchgeführt werden, 
+bevor das Kommando `git push` erfolgreich ausgeführt werden kann.
+
+Daher ist es wichtig die Fehlermeldung zu lesen, 
+die das Kommando `git push` gegebenfalls zurückmeldet.
