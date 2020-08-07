@@ -45,7 +45,7 @@ git remote add origin https://github.com/msg-azubi/nsd.git
 
 Der Standardbefehl von Git dafür ist:
 
-+
+. Das Kommando drückt (_engl._ push) Information vom lokalen Repository in das remote Repository, dessen URL dem Namen `origin` zugeordnet wurde.
 ----
 git push
 ----
