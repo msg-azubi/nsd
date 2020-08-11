@@ -1,0 +1,5 @@
+# Ignore backup Dateien in diesem Ordner 
+# erstellt durch Struktorrizer
+*.nsd.bak
+
+
