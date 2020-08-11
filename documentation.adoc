@@ -1,12 +1,117 @@
+
 =   Struktogramm
 
 == Aufgabe
 
-== Skizze des Code
+Der folgende Text beschreibt die Aufgabe "Warmbadetag".
+
+gegeben::
+Eine Tabelle mit Messwerte von Wassertemperaturen.
+
+gesucht::
+Bestimme, ob die Messwerte für einen "Warnbadetag" stehen.
++
+Die Messwerte stehen für einen Warmbadetag, wenn:
+* 50% der Messwerte eine Wassertemperatur von mehr als 22 Grad Celsius haben
+
+Lösung::
+Skizze des Code:::
+* Wir werden die Tabelle nicht aus einer Datei einlesen,
+  sondern interaktive im Struktorizer als Array übergeben.
++
+.Einlesen der Tabelle
+----
+OUTPUT "Eingeben eines Arrays von Wassertemperaturen : "
+OUTPUT "in der Form: { 17, 28, 29, 20, 31 }"
+INPUT  "Wassertemperaturen: ", wassertemps
+----
+
+* Am einem Warmbadtag müssen 50% der Messwert einen Wert größer
+  als `tempFuerWarmbadetag` (normalerweise 22 ).
++
+----
+int tempFuerWarmbadetag = 22
+----
++
+Jetzt könnten wir auch interaktive einen neuen
+Schwellenwert für Warmbadtage eingeben.
+
+* Weil wir eventuell später eine Datei einlesen werden,
+  nutzen wir eine `while` Schleife.
++
+Dann wäre die Bedingung:
++
+----
+string path <- "c:/dev/my/path/to/file/tabOfTemps.txt"
+int fileHandler <- fileOpen(path)
+// ...
+while (not fileEOF(fileHandler))
+----
++
+Jetzt:
++
+----
+int elementZaehler = 0
+int anzahlTempsFuerWarmbadetag = 0
+
+while (elementZaehler < length(wassertemps)
+   // Besondere Bedingung an Messwerte
+   if (wassertemps(elementZaehler) > tempFuerWarmbadetag
+        inc(anzahlTempsFuerWarmbadetag)
+
+   inc(elementZaehler)  // Um nächstes Element zulesen
+----
+
+* Prüfung, ob Warmbadetag
++
+Wenn über 50% der Wert über der  `tempFuerWarmbadetag` liegen,
+ist _Warmbadetag_.
++
+50 %  entspricht der Hälfte  (1/2)
++
+----
+// Es muss Testdaten geben für den `if`- und den `else`-Zweig
+if ( 2 * anzahlTempsFuerWarmbadetag > elementZaehler )
+    OUTPUT "Heute ist Warmbadetag!"
+else
+    OUTPUT "Heute ist kein Warmbadetag."
+----
+//
 
 == Code
-
 Öffne dazu die Datei `struktogramm.nsd` mit dem Programm `Struktorizer` .
 
 
 == TESTDATEN
+
+Welche Testdaten sind sinnvoll?::
+
+* Es muss Testdaten geben, dass alle Verzweigungen des Programms durchlaufen werden.
+** Wieviele Verzweigungen sind im unseren Fall relevant?
++
+Es muss Testdaten geben für den `if`- und den `else`-Zweig von
++
+----
+if ( 2 * anzahlTempsFuerWarmbadetag > elementZaehler )
+    OUTPUT "Heute ist Warmbadetag!"
+else
+    OUTPUT "Heute ist kein Warmbadetag."
+----
+
+Gebe Testdaten für::
+drei Messwerte:::
+sieben Messwerte:::
+
+//
+
+=== Meine Testdaten
+
+
+Ein Testdatensatz deckt immer alle Zweige eines Algorithmus ab.
+
+In unserem Fall besteht ein Satz von Testdaten aus Daten für den Fall a (`if`)
+bzw. Fall b (`else`).
+
+
+
+
