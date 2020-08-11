@@ -1,0 +1,12 @@
+=   Struktogramm
+
+== Aufgabe
+
+== Skizze des Code
+
+== Code
+
+Öffne dazu die Datei `struktogramm.nsd` mit dem Programm `Struktorizer` .
+
+
+== TESTDATEN
