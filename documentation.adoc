@@ -12,6 +12,7 @@ gesucht::
 Bestimme, ob die Messwerte für einen "Warnbadetag" stehen.
 +
 Die Messwerte stehen für einen Warmbadetag, wenn:
+
 * 50% der Messwerte eine Wassertemperatur von mehr als 22 Grad Celsius haben
 
 Lösung::
@@ -56,7 +57,7 @@ int anzahlTempsFuerWarmbadetag = 0
 
 while (elementZaehler < length(wassertemps)
    // Besondere Bedingung an Messwerte
-   if (wassertemps(elementZaehler) > tempFuerWarmbadetag
+   if (wassertemps[elementZaehler] > tempFuerWarmbadetag
         inc(anzahlTempsFuerWarmbadetag)
 
    inc(elementZaehler)  // Um nächstes Element zulesen
