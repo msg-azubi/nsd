@@ -1,0 +1,40 @@
+= Aufgabe 2_9 Rabatt
+
+gegeben::
+Ein Rabattregel ist gegeben:
+Beträg über 10000 bekommen eine Rabatt von 10%;
+niedriger Beträge bekommen einen Rabatt von 5%.
+
+gesucht::
+
+Ein Ware ist mit 10000 ausgezeichnet.
++
+Welcher Betrag ist mit dieser Rabatt-Regel zu zahlen?
+
+Lösung::
+----
+double betrag <- 0
+
+if ( betrag >  10000)
+    betrag = betrag * 0.90
+else
+    betrag = betrag * 0.95
+
+
+----
+
+
+= Code
+
+Siehe `struktogram.nsd`
+
+= Testdaten
+
+Vollständige Testdaten durchlaufen alle wichtigen Programmverzweigungen.
+
+Welche Testfälle gibt es?
+
+Es gibt zwei Testfälle um die Programmverzeigung zu testen:
+
+* if-Zweig testen mit `betrag` größer als 10000
+* else-Zweig testen mit `betrag` kleiner und gleich als 10000 ist
